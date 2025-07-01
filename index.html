@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Core BQ - Coming Soon</title>
+  <title>Core BQ - Discover More</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -11,23 +11,19 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom right, #3a66f2, #2e1f47);
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
+      scroll-behavior: smooth;
     }
-    .container {
-      max-width: 600px;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       padding: 2rem;
     }
-    .logo {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 1.5rem;
-    }
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
     p {
@@ -48,13 +44,78 @@
     .button:hover {
       background-color: #1534cc;
     }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(46, 31, 71, 0.9);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #9ab6ff;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <section class="hero">
     <h1>Welcome to Core BQ</h1>
     <p>Your essential tool for all aspects of life</p>
-    <button class="button">Coming soon to the App Store!</button>
-  </div>
+    <button class="button" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
+      Learn More
+    </button>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Core BQ</h2>
+    <p>Core BQ is your all-in-one platform designed to enhance productivity, improve mental clarity, and help you balance every area of life—from health to habits, work to wellness. We believe in bringing balance and quality to your core.</p>
+  </section>
+
+  <section class="section" id="features">
+    <h2>App Features</h2>
+    <p>✔️ Personalized habit tracking<br>
+       ✔️ Mindfulness and focus sessions<br>
+       ✔️ Seamless scheduling & time management<br>
+       ✔️ Data insights to help you grow</p>
+  </section>
+
+  <section class="section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>When is it launching?</strong><br>We’re launching later this year on the App Store and Google Play!</p>
+    <p><strong>Will it be free?</strong><br>Core BQ will have a free tier, with optional premium features.</p>
+    <p><strong>How can I stay updated?</strong><br>You’ll be able to join our mailing list soon!</p>
+  </section>
+
 </body>
 </html>
+
